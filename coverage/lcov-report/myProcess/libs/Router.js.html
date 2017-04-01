@@ -1,0 +1,476 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for myProcess\libs\Router.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">myProcess/libs/</a> Router.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">63.16% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>48/76</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">41.43% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>29/70</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">88.89% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>8/9</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">62.67% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>47/75</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">const util = require('util'),
+      regInteger = /^\d+$/,
+      regDecimal = /^[-+]?\d*\.?\d*$/,
+      regEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+&nbsp;
+// action format: {method : 'get/post/all', code: 'read',  name: '查询', handler: function, isAutority: true/false }
+let Router = function(){
+    this.actions = [];
+};
+&nbsp;
+let Action = function(code, method, name, handler, isAuth, validation){
+    this.code = code;
+    this.method = method;
+    this.name = name;
+    this.handler = handler;
+    this.isAuth = isAuth;
+    this.validation = validation;
+};
+&nbsp;
+Action.prototype.validate = function(query, body){
+    let that = this,
+        validation = that.validation,
+        queryerrors, bodyerrors;
+&nbsp;
+    if(!that.validation) return;
+&nbsp;
+    let examine = function(rules, params){
+        let errs = {};
+        for(let key in rules){
+            let rule = rules[key];
+&nbsp;
+            <span class="missing-if-branch" title="if path not taken" >I</span>if(rule.isRequired &amp;&amp; !params[key]){
+<span class="cstat-no" title="statement not covered" >                errs[key] = rule.msg || '必填';</span>
+            }
+&nbsp;
+            <span class="missing-if-branch" title="if path not taken" >I</span>if(rule.isInteger &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >params[key] </span>&amp;&amp; <span class="branch-2 cbranch-no" title="branch not covered" >!regInteger.test(params[key]))</span>{
+<span class="cstat-no" title="statement not covered" >                errs[key] = rule.msg || '必填为数字';</span>
+            }
+&nbsp;
+            <span class="missing-if-branch" title="if path not taken" >I</span>if(rule.isIn &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >params[key] </span>&amp;&amp; <span class="branch-2 cbranch-no" title="branch not covered" >rule.isIn.indexOf(params[key]) == -1)</span>{
+<span class="cstat-no" title="statement not covered" >                errs[key] = rule.msg || util.format('值必须在 %s 之间', rule.isIn.join(','));</span>
+            }
+&nbsp;
+            <span class="missing-if-branch" title="if path not taken" >I</span>if(rule.isDecimal &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >params[key] </span>&amp;&amp; <span class="branch-2 cbranch-no" title="branch not covered" >!regDecimal.test(params[key]))</span>{
+<span class="cstat-no" title="statement not covered" >                errs[key] = rule.msg || '数字无效';</span>
+            }
+&nbsp;
+            <span class="missing-if-branch" title="if path not taken" >I</span>if(rule.isEmail &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >params[key] </span>&amp;&amp; <span class="branch-2 cbranch-no" title="branch not covered" >!regEmail.test(params[key]))</span>{
+<span class="cstat-no" title="statement not covered" >                errs[key] = rule.msg || '数字无效';</span>
+            }
+        }
+        return Object.keys(errs).length ? <span class="branch-0 cbranch-no" title="branch not covered" >errs </span>: undefined;
+    };
+&nbsp;
+    validation.query &amp;&amp; (queryerrors =  examine(validation.query, query));  // {skip: must number} or undefined
+    validation.body &amp;&amp; (bodyerrors =  examine(validation.body, body));  // {name: required } or undefined
+&nbsp;
+    return (!queryerrors &amp;&amp; !bodyerrors) ? undefined : <span class="branch-1 cbranch-no" title="branch not covered" >Object.assign({},queryerrors, bodyerrors);</span>
+};
+&nbsp;
+Router.prototype.action = function(method, args){
+    let code = args[0], name, handler, isAuthority, validation;
+    
+    // two letiable
+    // 1. code handler
+    if(args.length == 2){
+        name = commonAction[code];
+        handler = args[1];
+        isAuthority = true;
+    }else <span class="missing-if-branch" title="else path not taken" >E</span>if(args.length == 3){
+        <span class="missing-if-branch" title="if path not taken" >I</span>if(typeof(args[1]) == 'function' &amp;&amp; typeof(args[2]) == 'boolean'){
+            // code, handler, isAuthority
+<span class="cstat-no" title="statement not covered" >            name = commonAction[code];</span>
+<span class="cstat-no" title="statement not covered" >            handler = args[1];</span>
+<span class="cstat-no" title="statement not covered" >            isAuthority = args[2];</span>
+        }else <span class="missing-if-branch" title="if path not taken" >I</span>if(typeof(args[1]) == 'string' &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >typeof(args[2]) == 'function')</span>{
+            // code, name, handler
+<span class="cstat-no" title="statement not covered" >            name = args[1];</span>
+<span class="cstat-no" title="statement not covered" >            handler = args[2];</span>
+<span class="cstat-no" title="statement not covered" >            isAuthority = true;</span>
+        }else{
+            // code, handler, validation
+            name = commonAction[code];
+            handler = args[1];
+            validation = args[2];
+        }
+    }else <span class="cstat-no" title="statement not covered" >if(args.length == 4){</span>
+        // code handler isAuthority validation
+<span class="cstat-no" title="statement not covered" >        if(typeof(args[1]) == 'function' &amp;&amp; typeof(args[2]) == 'boolean' &amp;&amp; typeof(args[3]) == 'object'){</span>
+<span class="cstat-no" title="statement not covered" >            handler = args[1];</span>
+<span class="cstat-no" title="statement not covered" >            isAuthority = args[2];</span>
+<span class="cstat-no" title="statement not covered" >            validation = args[3];</span>
+        }else <span class="cstat-no" title="statement not covered" >if(typeof(args[1]) == 'string' &amp;&amp; typeof(args[2]) == 'funciton' &amp;&amp; typeof(args[3]) == 'object'){</span>
+            // code name handler validation
+<span class="cstat-no" title="statement not covered" >            name = args[1];</span>
+<span class="cstat-no" title="statement not covered" >            handler = args[2];</span>
+<span class="cstat-no" title="statement not covered" >            validation = args[3];</span>
+        }else{
+            // code name handler isAuthority
+<span class="cstat-no" title="statement not covered" >            name = args[1];</span>
+<span class="cstat-no" title="statement not covered" >            handler = args[2];</span>
+<span class="cstat-no" title="statement not covered" >            isAuthority = args[3];</span>
+        }
+    }else{
+        // code name handler isAuthority validation
+<span class="cstat-no" title="statement not covered" >        name = args[1];</span>
+<span class="cstat-no" title="statement not covered" >        handler = args[2];</span>
+<span class="cstat-no" title="statement not covered" >        isAuthority = args[3];</span>
+<span class="cstat-no" title="statement not covered" >        validation = args[4];</span>
+    }
+&nbsp;
+    // this.actions.push({code: code, method: method, name: name, handler: handler, isAuthority: isAuthority});
+    this.actions.push(new Action(code, method, name, handler, isAuthority, validation));
+};
+&nbsp;
+Router.prototype.post = function(){
+    this.action('post', arguments);
+};
+&nbsp;
+Router.prototype.get = function(){
+    this.action('get', arguments);
+};
+&nbsp;
+Router.prototype.all = <span class="fstat-no" title="function not covered" >function(){</span>
+<span class="cstat-no" title="statement not covered" >    this.action('all', arguments);</span>
+};
+&nbsp;
+let commonAction = {
+    create : '新增',
+    update : '编辑',
+    read : '查询',
+    destroy :  '删除'
+};
+&nbsp;
+module.exports = function(){
+    return new Router();
+};
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Oct 12 2016 15:29:42 GMT+0800 (中国标准时间)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

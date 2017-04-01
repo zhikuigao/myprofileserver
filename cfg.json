@@ -1,0 +1,10 @@
+{
+    "cfgFileList":[
+        {
+            "znode":"/server/tru_myprocessserver_1.0/common/config.js",
+            "targetPath":"/opt/truplatform/myprocessserver/config.js",
+            "needRestart":"true"
+        }
+    ],
+    "restartShell":"/opt/truplatform/myprocessserver/restart.sh"
+}

@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for myProcess\middlewares\upload.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">myProcess/middlewares/</a> upload.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">71.43% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>25/35</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">50% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>6/12</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>1/1</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">70.59% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>24/34</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">19×</span>
+<span class="cline-any cline-yes">19×</span>
+<span class="cline-any cline-yes">19×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">let busboyParser = require('co-busboy');
+let uuid = require('node-uuid');
+let path = require('path');
+let fs = require('fs');
+let config = require('../config.js');
+let Attachment = require('../models/sys/attachment.js');
+var uploadPath = config.uploadPath || path.join(__dirname, config.filesUrl);
+!fs.existsSync(uploadPath) &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >fs.mkdirSync(uploadPath);</span>
+&nbsp;
+module.exports = function *(next) {
+&nbsp;
+    if (!this.request.is('multipart/*')) return yield next;
+&nbsp;
+    let ctx = this;
+    var urlReg = /api\/(\w*)\/(\w*)\/(\w*)/;
+    let match = urlReg.exec(this.path),
+        module = match[1],         // sys
+        controller = match[2],
+        action = match[3];   //read
+    ctx.request.module = module;
+    ctx.request.controller = controller;
+    ctx.request.action = action;
+&nbsp;
+    let parts = busboyParser(this), files = {}, part, body = {};
+    while (part = yield parts) {
+        <span class="missing-if-branch" title="else path not taken" >E</span>if (part.length) {
+            body[part[0]] = part[1];
+            continue;
+        }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        let originalName = part.filename, fieldName = part.fieldname,</span>
+            serverName = uuid.v1(), now = new Date(), currMonth = now.toISOString().substr(0, 7);
+&nbsp;
+        // 保存到数据库
+<span class="cstat-no" title="statement not covered" >        let entity = new Attachment({</span>
+            moduleName: module,
+            originalName: originalName,
+            serverName: serverName,
+            length: part._readableState.length,
+            mimeType: part.mimeType,
+            uploaderId: '',
+            uploaderName: '',
+            uploadTime: now
+        });
+<span class="cstat-no" title="statement not covered" >        yield entity.save();</span>
+&nbsp;
+        // 保存到文件系统
+<span class="cstat-no" title="statement not covered" >        let modulePath = path.join(uploadPath, module);</span>
+<span class="cstat-no" title="statement not covered" >        let moduleMonthPath = path.join(modulePath, currMonth);</span>
+<span class="cstat-no" title="statement not covered" >        let newFilePath = path.join(moduleMonthPath, serverName);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        !fs.existsSync(modulePath) &amp;&amp; fs.mkdirSync(modulePath);</span>
+<span class="cstat-no" title="statement not covered" >        !fs.existsSync(moduleMonthPath) &amp;&amp; fs.mkdirSync(moduleMonthPath);</span>
+<span class="cstat-no" title="statement not covered" >        files[fieldName] = {</span>
+            originalName: entity.originalName,
+            size: entity.length,
+            mimeType: entity.mimeType,
+            serverPath: newFilePath,
+            id: entity._id
+        };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        part.pipe(fs.createWriteStream(newFilePath));</span>
+    }
+&nbsp;
+    ctx.request.body = body;
+    ctx.request.files = files;
+    yield next;
+};
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Oct 12 2016 15:29:42 GMT+0800 (中国标准时间)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>
